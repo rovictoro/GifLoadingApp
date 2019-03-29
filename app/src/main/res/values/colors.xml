@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#D9D9D9</color>
+    <color name="colorPrimaryDark">#000000</color>
+    <color name="colorAccent">#C32033</color>
+    <color name="colorAccent_transparent">#55C32033</color>
+    <color name="colorTransparent">#00ffffff</color>
+
+    <color name="colorPrimaryInverse">#FFFBC926</color>
+    <color name="colorPrimaryDarkInverse">#000000</color>
+    <color name="colorAccentInverse">#FFFBC926</color>
+    <color name="colorPrimaryInverseLight">#FFF8F0BB</color>
+
+    <color name="colorRecentTitleLight">#D9D9D9</color>
+    <color name="colorRecentTitleDark">#FFFBC926</color>
+
+    <color name="colorMenuLight">#ffffff</color>
+    <color name="colorMenuDark">#707070</color>
+
+    <color name="colorFont">#707070</color>
+    <color name="colorFontGold">#FFFBC926</color>
+
+
+    <color name="layout_bottom_bar_background">#80D9D9D9</color>
+
+    <color name="layout_content_main_text_color">#707070</color>
+    <color name="layout_incoming_live_call_background">#FFa32035</color>
+    <color name="layout_outgoing_call_background">#FFa32035</color>
+
+
+    <color name="black_overlay">#66000000</color>
+    <color name="holo_blue">#FF33B5E5</color>
+    <color name="holo_red">#e53935</color>
+    <color name="holo_lite_green">#64dd17</color>
+    <color name="holo_yellow">#ffd600</color>
+    <color name="holo_indigo">#304ffe</color>
+    <color name="holo_purple">#e040fb</color>
+    <color name="holo_green">#00e676</color>
+    <color name="holo_deep_purple">#7c4dff</color>
+    <color name="holo_deep_green">#64dd17</color>
+    <color name="holo_amber">#ffd54f</color>
+    <color name="holo_yellow_900">#f57f17</color>
+    <color name="holo_deep_orange">#d84315</color>
+    <color name="holo_red_200">#ff5252</color>
+    <color name="holo_cyan_400">#00e5ff</color>
+    <color name="holo_white">#ffffff</color>
+    <color name="holo_white_transparent">#88ffffff</color>
+    <color name="holo_white_transparent_cc">#CCffffff</color>
+    <color name="holo_gold_transparent">#88FBC926</color>
+    <color name="holo_black">#000000</color>
+    <color name="holo_gold">#FFFBC926</color>
+
+
+    <color name="holo_transparent">#00ffffff</color>
+
+
+</resources>
