@@ -6,45 +6,35 @@ import android.content.res.Configuration;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Parcelable;
-import android.support.annotation.NonNull;
-import android.support.design.widget.FloatingActionButton;
-import android.support.v4.content.ContextCompat;
-import android.support.v4.widget.SwipeRefreshLayout;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.StaggeredGridLayoutManager;
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
+import androidx.recyclerview.widget.RecyclerView;
+import androidx.recyclerview.widget.StaggeredGridLayoutManager;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
+
 import android.util.Log;
 import android.view.View;
-import android.widget.ProgressBar;
 import android.widget.SearchView;
 import android.widget.TextView;
-
-
-import com.giphy.sdk.core.models.Media;
-import com.giphy.sdk.core.models.enums.MediaType;
-import com.giphy.sdk.core.network.api.CompletionHandler;
 import com.giphy.sdk.core.network.api.GPHApiClient;
-import com.giphy.sdk.core.network.response.ListMediaResponse;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.rovictoro.giphy.R;
 import com.rovictoro.giphy.dagger.GifApplication;
 import com.rovictoro.giphy.models.GifModel;
 import com.rovictoro.giphy.dagger.NetworkMethodsImpl;
 import com.rovictoro.giphy.models.GiphyClientImpl;
 import com.rovictoro.giphy.utils.Utils;
-
-import java.util.ArrayList;
 import java.util.List;
-
 import javax.inject.Inject;
-
 import io.reactivex.BackpressureStrategy;
 import io.reactivex.Observable;
 import io.reactivex.Single;
 import io.reactivex.SingleObserver;
 import io.reactivex.disposables.Disposable;
 import io.reactivex.schedulers.Schedulers;
-
 import static android.view.WindowManager.LayoutParams.SOFT_INPUT_ADJUST_RESIZE;
+
 
 public class MainActivity extends AppCompatActivity implements GifContract.View{
 

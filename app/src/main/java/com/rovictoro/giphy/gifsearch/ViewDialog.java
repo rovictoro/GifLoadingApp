@@ -2,10 +2,11 @@ package com.rovictoro.giphy.gifsearch;
 
 import android.app.Activity;
 import android.app.Dialog;
-import android.support.annotation.Nullable;
 import android.util.Log;
 import android.view.Window;
 import android.widget.ImageView;
+
+import androidx.annotation.Nullable;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.DataSource;
@@ -14,10 +15,8 @@ import com.bumptech.glide.load.engine.GlideException;
 import com.bumptech.glide.load.resource.gif.GifDrawable;
 import com.bumptech.glide.request.RequestListener;
 import com.bumptech.glide.request.RequestOptions;
-import com.bumptech.glide.request.target.DrawableImageViewTarget;
 import com.bumptech.glide.request.target.Target;
 import com.rovictoro.giphy.R;
-import com.rovictoro.giphy.glide.GlideApp;
 import com.rovictoro.giphy.models.GifModel;
 
 
@@ -39,7 +38,7 @@ public class ViewDialog {
         ImageView gifImageView = dialog.findViewById(R.id.custom_loading_imageView);
 
         //DrawableImageViewTarget imageViewTarget = new DrawableImageViewTarget (gifImageView);
-        GlideApp.with(activity).asGif()
+        Glide.with(activity).asGif()
                 //.centerInside()
                 .load(gifModel.getFixedWidthDownsampledUrl())
                 .fitCenter()

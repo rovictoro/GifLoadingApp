@@ -26,7 +26,7 @@ public class GiphyClientImpl implements GiphyClient {
     public void searchQueueGPHApi(GifContract.OnResponseCallback callback, String searchWord){
 
         if(mGphApiClient != null && callback != null && searchWord != null) {
-            mGphApiClient.search(searchWord, MediaType.gif, null, null, null, null, new CompletionHandler<ListMediaResponse>() {
+            mGphApiClient.search(searchWord, MediaType.gif, null, null, null, null, null,  new CompletionHandler<ListMediaResponse>() {
                 @Override
                 public void onComplete(ListMediaResponse result, Throwable e) {
                     if (result == null) {

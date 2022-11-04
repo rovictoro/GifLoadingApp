@@ -2,18 +2,17 @@ package com.rovictoro.giphy.gifsearch;
 
 
 import android.app.Activity;
-import android.app.Dialog;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
-import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
-import android.view.Window;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.DataSource;
@@ -25,10 +24,7 @@ import com.bumptech.glide.request.RequestOptions;
 import com.bumptech.glide.request.target.Target;
 import com.rovictoro.giphy.R;
 import com.rovictoro.giphy.dagger.GifApplication;
-import com.rovictoro.giphy.glide.GlideApp;
 import com.rovictoro.giphy.models.GifModel;
-
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -137,7 +133,7 @@ public class GifAdapter extends RecyclerView.Adapter<GifAdapter.ViewHolder> {
 
     private void loadGifGlide(final Activity activity, final GifModel gifModel, final ImageView view){
 
-       GlideApp.with(activity)
+        Glide.with(activity)
                 .asGif()
                 //.centerInside()
                 .load(gifModel.getFixedWidthDownsampledUrl())
