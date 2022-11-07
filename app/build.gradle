@@ -43,6 +43,7 @@ dependencies {
     /* To be able to animate properties of a VectorDrawable, add the following.  Useful for
      * illustration purposes or state changes in response to user events
      */
+    
   //  implementation "androidx.vectordrawable:vectordrawable-animated:1.1.0"
 
     /* To use a seekable alternative for `androidx.vectordrawable:vectordrawable-animated` add the
