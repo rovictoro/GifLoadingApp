@@ -1,56 +1,31 @@
 package com.rovictoro.giphy.utils;
 
 import android.app.Activity;
-import android.app.ActivityManager;
-import android.content.Context;
-import android.net.ConnectivityManager;
-import android.net.NetworkInfo;
 import android.os.Handler;
 import android.os.Looper;
-import android.support.annotation.Nullable;
 import android.util.Log;
 import android.util.LruCache;
 import android.view.inputmethod.InputMethodManager;
-import android.widget.ImageView;
+
+import androidx.annotation.Nullable;
 
 import com.bumptech.glide.Glide;
-import com.bumptech.glide.GlideBuilder;
 import com.bumptech.glide.load.DataSource;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.bumptech.glide.load.engine.GlideException;
-import com.bumptech.glide.load.engine.bitmap_recycle.LruBitmapPool;
-import com.bumptech.glide.load.engine.cache.InternalCacheDiskCacheFactory;
-import com.bumptech.glide.load.engine.cache.LruResourceCache;
 import com.bumptech.glide.load.resource.gif.GifDrawable;
 import com.bumptech.glide.request.RequestListener;
 import com.bumptech.glide.request.RequestOptions;
-
-//import com.bumptech.glide.request.target.SimpleTarget;
 import com.bumptech.glide.request.target.SimpleTarget;
 import com.bumptech.glide.request.target.Target;
 import com.bumptech.glide.request.transition.Transition;
-import com.giphy.sdk.core.models.Media;
-import com.giphy.sdk.core.models.enums.MediaType;
-import com.giphy.sdk.core.network.api.CompletionHandler;
-import com.giphy.sdk.core.network.api.GPHApi;
-import com.giphy.sdk.core.network.api.GPHApiClient;
-import com.giphy.sdk.core.network.response.ListMediaResponse;
 import com.rovictoro.giphy.gifsearch.GifAdapter;
-import com.rovictoro.giphy.glide.GlideApp;
 import com.rovictoro.giphy.models.GifModel;
-
 import java.lang.ref.WeakReference;
-import java.util.ArrayList;
-import java.util.List;
-
-import io.reactivex.BackpressureStrategy;
-import io.reactivex.Observable;
-import io.reactivex.Observer;
 import io.reactivex.Single;
 import io.reactivex.SingleObserver;
 import io.reactivex.disposables.Disposable;
 
-import static android.content.Context.ACTIVITY_SERVICE;
 import static android.view.WindowManager.LayoutParams.SOFT_INPUT_ADJUST_PAN;
 
 public interface Utils {
@@ -88,7 +63,7 @@ public interface Utils {
             }
         };
 
-         GlideApp.with(activity)
+         Glide.with(activity)
                 .asGif()
                 .centerInside()
                 .load(gifModel.getFixedWidthDownsampledUrl())

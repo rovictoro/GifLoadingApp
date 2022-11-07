@@ -25,7 +25,7 @@ public class GifApplication extends Application {
         return DaggerActivityComponent.builder()
                 .appModule(new AppModule(this))
                 .netModule(new NetModule())
-                .gPHApiModule(new GPHApiModule(GPH_API_KEY))
+                .gPHApiModule(new GPHApiModule(this.getApplicationContext(), GPH_API_KEY))
                 .build();
 
     }

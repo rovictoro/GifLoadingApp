@@ -1,28 +1,22 @@
 package com.rovictoro.giphy.glide;
 
-import android.app.ActivityManager;
 import android.content.Context;
-import android.support.annotation.NonNull;
+
+import androidx.annotation.NonNull;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.GlideBuilder;
 import com.bumptech.glide.Registry;
 import com.bumptech.glide.annotation.GlideModule;
 import com.bumptech.glide.integration.okhttp3.OkHttpUrlLoader;
-import com.bumptech.glide.load.engine.bitmap_recycle.LruBitmapPool;
-import com.bumptech.glide.load.engine.cache.InternalCacheDiskCacheFactory;
-import com.bumptech.glide.load.engine.cache.LruResourceCache;
 import com.bumptech.glide.load.model.GlideUrl;
 import com.bumptech.glide.module.AppGlideModule;
 import com.rovictoro.giphy.dagger.GifApplication;
-
 import java.io.InputStream;
-
 import javax.inject.Inject;
 
+import okhttp3.Call;
 import okhttp3.OkHttpClient;
-
-import static android.content.Context.ACTIVITY_SERVICE;
 
 @GlideModule
 public class MyAppGlideModule extends AppGlideModule {
@@ -69,7 +63,7 @@ public class MyAppGlideModule extends AppGlideModule {
                 .build();
                 */
 
-        OkHttpUrlLoader.Factory factory = new OkHttpUrlLoader.Factory(client);
+        OkHttpUrlLoader.Factory factory = new OkHttpUrlLoader.Factory((Call.Factory) client);
 
         glide.getRegistry().replace(GlideUrl.class, InputStream.class, factory);
     }
