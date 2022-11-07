@@ -104,13 +104,6 @@ public class GifAdapter extends RecyclerView.Adapter<GifAdapter.ViewHolder> {
                 viewDialog.showDialog(gifModel);
             }
         });
-        /*holder.itemView.setOnClickListener(new OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                viewDialog.showDialog(gifModel);
-            }
-        });
-        */
         holder.gifImage.requestLayout();
     }
 
@@ -143,7 +136,7 @@ public class GifAdapter extends RecyclerView.Adapter<GifAdapter.ViewHolder> {
                 .addListener(new RequestListener<GifDrawable>() {
                     @Override
                     public boolean onLoadFailed(@Nullable GlideException e, Object model, Target<GifDrawable> target, boolean isFirstResource) {
-                        Log.e("onLoadFailed: ", "gif: " + "title: " + gifModel.getTitle() + " size: " + gifModel.getFixedWidthDownsampledSize() );
+                        //Log.e("onLoadFailed: ", "gif: " + "title: " + gifModel.getTitle() + " size: " + gifModel.getFixedWidthDownsampledSize() );
                         return false;
                     }
 

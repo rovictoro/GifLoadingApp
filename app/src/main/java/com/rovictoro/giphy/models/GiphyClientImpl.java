@@ -2,8 +2,11 @@ package com.rovictoro.giphy.models;
 
 import android.util.Log;
 
+import com.giphy.sdk.analytics.models.enums.EventType;
 import com.giphy.sdk.core.models.Media;
+import com.giphy.sdk.core.models.enums.LangType;
 import com.giphy.sdk.core.models.enums.MediaType;
+import com.giphy.sdk.core.models.enums.RatingType;
 import com.giphy.sdk.core.network.api.CompletionHandler;
 import com.giphy.sdk.core.network.api.GPHApiClient;
 import com.giphy.sdk.core.network.response.ListMediaResponse;
@@ -26,7 +29,7 @@ public class GiphyClientImpl implements GiphyClient {
     public void searchQueueGPHApi(GifContract.OnResponseCallback callback, String searchWord){
 
         if(mGphApiClient != null && callback != null && searchWord != null) {
-            mGphApiClient.search(searchWord, MediaType.gif, null, null, null, null, null,  new CompletionHandler<ListMediaResponse>() {
+            mGphApiClient.search(searchWord, MediaType.gif, null, null, RatingType.pg13, LangType.english, new CompletionHandler<ListMediaResponse>() {
                 @Override
                 public void onComplete(ListMediaResponse result, Throwable e) {
                     if (result == null) {
