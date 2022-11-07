@@ -39,12 +39,11 @@ repositories {
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
-
     implementation "androidx.vectordrawable:vectordrawable:1.1.0"
-
     /* To be able to animate properties of a VectorDrawable, add the following.  Useful for
      * illustration purposes or state changes in response to user events
      */
+    
   //  implementation "androidx.vectordrawable:vectordrawable-animated:1.1.0"
 
     /* To use a seekable alternative for `androidx.vectordrawable:vectordrawable-animated` add the
@@ -53,9 +52,6 @@ dependencies {
   //  implementation "androidx.vectordrawable:vectordrawable-seekable:1.0.0-beta01"
 
     implementation "androidx.swiperefreshlayout:swiperefreshlayout:1.1.0"
-
-
-
     implementation 'com.google.android.material:material:1.7.0'
     //implementation 'com.google.android.material:material:1.8.0-alpha02'
     //implementation 'androidx.recyclerview:recyclerview:1.2.1'
