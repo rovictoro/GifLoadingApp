@@ -1,13 +1,13 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 32
-    buildToolsVersion "32.0.0"
+    compileSdkVersion 33
+    buildToolsVersion "33.0.0"
 
     defaultConfig {
         applicationId "com.rovictoro.giphy"
         minSdkVersion 21
-        targetSdkVersion 32
+        targetSdkVersion 33
         versionCode 1
         versionName "1.0"
     }
@@ -73,8 +73,7 @@ dependencies {
         transitive = false
     }
 
-    //implementation 'com.squareup.okhttp3:okhttp:3.13.1'
-    implementation 'com.squareup.okhttp3:okhttp:4.0.1'
+    implementation 'com.squareup.okhttp3:okhttp:4.9.2'
     //testImplementation("com.squareup.okhttp3:mockwebserver:3.13.1")
     implementation 'com.github.bumptech.glide:okhttp3-integration:4.8.0@aar'
     //implementation ('com.github.bumptech.glide:okhttp3-integration:4.0.0'){
